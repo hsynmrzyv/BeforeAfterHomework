@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #0e183e;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  width: 400px;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 2rem;
+}
+
+.title {
+  color: #0e183e;
+  font-size: 20px;
+  text-transform: capitalize;
+  margin-bottom: 15px;
+}
+
+.subject {
+  margin-bottom: 25px;
+}
+
+.subject-title {
+  text-transform: capitalize;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.subject-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.subject-area {
+  width: 300px;
+  height: 15px;
+  background-color: #777;
+  border-radius: 10px;
+  position: relative;
+  border: 1px solid black;
+}
+
+.subject-area::after {
+  content: "";
+  height: calc(100% - 1px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: inherit;
+  border: inherit;
+}
+
+.subject:nth-child(1) .subject-area::after {
+  background-color: #fc9860;
+  width: 52%;
+}
+
+.subject:nth-child(2) .subject-area::after {
+  background-color: #608cfc;
+  width: 76%;
+}
+
+.subject:nth-child(3) .subject-area::after {
+  background-color: #fc6086;
+  width: 21%;
+}
